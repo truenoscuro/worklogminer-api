@@ -4,7 +4,7 @@ node{
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
     td.parallel ([
-        funtion1:["Maven","print"] 
+        funtion1:"maven" 
         ])
 
 }
