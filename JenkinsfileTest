@@ -5,7 +5,6 @@ node{
     
     td.parallel ([
         maven:"compile",
-        sonar:"scanner",
         personal: {
             echo "is personal"
         }
