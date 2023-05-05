@@ -4,13 +4,7 @@ node{
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
     td.parallel ([
-        maven:"compile",
-        personal: {
-            echo "is personal"
-        },
-        test2:{
-            sh "ls"
-        }
+        maven:"compile"
         ])
 
 }
