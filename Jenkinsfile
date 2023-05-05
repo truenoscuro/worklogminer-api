@@ -1,6 +1,6 @@
 node{
     stage("ls"){
-        sh "ls"
+        sh "ls *"
     }
     parallel([
         sonar:{
