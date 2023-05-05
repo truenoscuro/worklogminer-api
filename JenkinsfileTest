@@ -1,6 +1,6 @@
 node{
     stage("git dowlowad"){
-        git url: https://github.com/truenoscuro/worklogminer-api.git
+        git url: "https://github.com/truenoscuro/worklogminer-api.git"
     }
     parallel([
             sonar:{
