@@ -1,10 +1,8 @@
 @Library("custom-library") _
 node{
-    td.init this, env, docker  // stage init program
-    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    //td.init this, env, docker  // stage init program
+    //td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
-    td.parallel ([
-        maven:"compile"
-        ])
+    td.parallel ([ maven:"compile" ])
 
 }
