@@ -19,7 +19,7 @@ node{
             }
         },
     ])
-    stage('maven buil'){
+    stage('maven build'){
        withMaven{
                 sh "mvn clean install"
             } 
