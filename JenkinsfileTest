@@ -1,7 +1,6 @@
 node{
     sh """
-    cd worklogminer-api
-    ls 
+    cat Dockerfile
     """
            
     
