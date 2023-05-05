@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  worklog-api:
+    container_name: worklog-api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "1004:8080"
+      - "1005:8080"

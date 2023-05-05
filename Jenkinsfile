@@ -1,4 +1,7 @@
 node{
+    stage("git dowlowad"){
+        git url: "https://github.com/truenoscuro/worklogminer-api.git"
+    }
     parallel([
         sonar:{
             def tolSonar = tool 'sonar'
