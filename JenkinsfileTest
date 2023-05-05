@@ -1,4 +1,4 @@
 @Library("custom-library") _
 node{
-    td.init(script,env,docker)
+    td.init(this,env,docker)
 }
