@@ -3,5 +3,5 @@ node{
     td.init this, env, docker  // stage init program le puedes pasar el nombre del sonar
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
    
-    td.parallelSonar([maven:"compile"])
+    td.parallelSonar()
 }
