@@ -1,0 +1,6 @@
+node{
+    withMaven{
+                sh "mvn clean compile"
+            } 
+    
+}
