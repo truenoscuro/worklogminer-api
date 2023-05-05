@@ -1,4 +1,4 @@
 @Library("custom-library") _
 node{
-    td.init(this,env,docker)
+    td.pipeline(this,env,docker)
 }
