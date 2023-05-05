@@ -1,4 +1,7 @@
 node{
+    stage("ls"){
+        sh "ls"
+    }
     parallel([
         sonar:{
             def tolSonar = tool 'sonar'
