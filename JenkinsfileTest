@@ -5,8 +5,6 @@ node{
    
     td.parallel([
         sonar:"scanner",
-        hola:{
-            echo "hola soy manolo"
-        }
+        maven:"compile"
     ])
 }
