@@ -1,6 +1,8 @@
 node{
-    withMaven{
-                sh "cat pom.xml"
-            } 
+    sh """
+    cd worklogminer-api
+    ls 
+    """
+           
     
 }
