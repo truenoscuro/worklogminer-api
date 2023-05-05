@@ -9,7 +9,7 @@ node{
             echo "is personal"
         },
         test2:{
-            sh "hello ara si"
+            sh "ls"
         }
         ])
 
