@@ -3,9 +3,9 @@ node{
     
     td.init this, env, docker  // stage init program le puedes pasar el nombre del sonar
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
-    td.stage([test1:{echo "hola"}],"hola")
-    td.parallel([ sonar:"scannerBinaries", maven:"compile" ])
-    td.stage([maven:"install"],"Build maven")
-    td.stage([deploy:{ echo "no es pot desplegar"}], "Deploy redwood") // no me deixa tenir el string a la mateixa linea . No ser perque
     
+    //td.parallel([ sonar:"scannerBinaries", maven:"compile" ])
+    //td.stage([maven:"install"],"Build maven")
+    //td.stage([deploy:{ echo "no es pot desplegar"}], "Deploy redwood") // no me deixa tenir el string a la mateixa linea . No ser perque
+    td.testDocker()
 }
