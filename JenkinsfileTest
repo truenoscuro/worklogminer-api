@@ -1,7 +1,7 @@
 @Library("custom-library") _
 node{
     
-    td.init this, env, docker  // stage init program le puedes pasar el nombre del sonar
+    td.init this, env  // stage init program le puedes pasar el nombre del sonar
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
     //td.parallel([ sonar:"scannerBinaries", maven:"compile" ])
