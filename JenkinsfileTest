@@ -7,5 +7,5 @@ node{
     //td.parallel([ sonar:"scannerBinaries", maven:"compile" ])
     //td.stage([maven:"install"],"Build maven")
     //td.stage([deploy:{ echo "no es pot desplegar"}], "Deploy redwood") // no me deixa tenir el string a la mateixa linea . No ser perque
-    td.testDocker()
+    td.dockerfileRun()
 }
