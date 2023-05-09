@@ -22,9 +22,12 @@ node {
         
         sh "touch prova-1"
         sh "touch prova-2"
-        sh "touch solv"
-        sh "find . -regex  *-1> solv "
-        sh "cat solv"
+
+        def directorio = "."
+
+        new File( directorio ).eachFile echo "${it}"
+
+        
         //putSsh("prova-1",'.')
 
         //com("ls")
