@@ -1,43 +1,12 @@
 @Library("custom-library") _
-
 def remote = [:]
-remote.name = "server"
 remote.host = "172.17.177.22"
-remote.allowAnyHosts = true
-def com = { String c ->  sshCommand([remote: remote , command: "${c}",sudo: false])}
-def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}"])}
-def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}", override: true])}
-def remove = { String p ->  sshRemove([remote: remote , path: "${p}"])}
+remote.credentialsId ="server-docker"
 node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
-    //td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
-    withCredentials([sshUserPrivateKey(
-        credentialsId: 'server-docker', 
-        keyFileVariable: 'keyFile',
-        passphraseVariable: '', 
-        usernameVariable: 'userName')]) {
-        remote.user =  userName
-        remote.identityFile = keyFile 
-        
-
-        sh "touch  prova-1"
-        sh "touch prova-2"
-        echo " workspace ---> ${env.WORKSPACE}"
-
-        echo "Ficheros "
-        sh "ls "
-        echo " programa para leer ficheris "
-        td.ficheros()
-
-
-        
-        //putSsh("prova-1",'.')
-
-        //com("ls")
-
-        //remove("Dockerfile")
-    }
     
+    td.sshRunDocker( remote ,"maven")
 
 }
