@@ -3,7 +3,7 @@
 def remote = [:]
 remote.name = "server"
 remote.host = "172.17.177.22"
-remote.allowAnyHosts = false
+remote.allowAnyHosts = true
 
 node {
     withCredentials([sshUserPrivateKey(
@@ -11,11 +11,12 @@ node {
         keyFileVariable: 'identity',
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
+            
+            sh "cat $identity"
+            remote.user =  userName
+            remote.identityFile = identity
 
-        remote.user =  userName
-        remote.identityFile = identity
-
-        sshCommand remote: remote , command: 'echo "hello world"'
+            sshCommand remote: remote , command: 'echo "hello world"'
     
     }
 }
