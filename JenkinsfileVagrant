@@ -4,20 +4,27 @@ def remote = [:]
 remote.name = "server"
 remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
-def scriptC = { String c ->  sshCommand([remote: this.remote , command: "${c}",sudo: false])}
+def com = { String c ->  sshCommand([remote: this.remote , command: "${c}",sudo: false])}
 def put = { String f,String i ->  sshPut ([remote: this.remote , from: "${f}",into:"${i}",sudo: false])}
-def get = { String f,String i ->  sshPut ([remote: this.remote , from: "${f}",into:"${i}",sudo: false, override: true])}
-def remove = { String p ->  sshPut ([remote: remote , path: "${p}",sudo: false])}
+def get = { String f,String i ->  sshGet  ([remote: this.remote , from: "${f}",into:"${i}",sudo: false, override: true])}
+def remove = { String p ->  sshRemove  ([remote: remote , path: "${p}",sudo: false])}
 node {
+    td.init this, env  // stage init program le puedes pasar el nombre del sonar
+    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    
     withCredentials([sshUserPrivateKey(
         credentialsId: 'server-docker', 
         keyFileVariable: 'keyFile',
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
-
         remote.user =  userName
         remote.identityFile = keyFile 
-        funct("ls")
+        
+
+
+        put("Dockefile,'.'")
+        com("ls")
+        remove("Dockerfile")
     }
     
 
