@@ -20,7 +20,7 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
-        ls "./target/"
+        sh "ls ./target/"
 
         //putSsh("prova-1",'.')
 
