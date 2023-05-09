@@ -10,7 +10,7 @@ node {
         remote.identityFile = identity
         stage("SSH Steps !") {
 
-            sshCommand remote: remote, command: 'touch /home/vagrant/hola.txt'
+            sshCommand remote: remote, command: 'ls'
 
 
            
