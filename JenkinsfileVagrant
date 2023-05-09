@@ -8,5 +8,5 @@ remote.allowAnyHosts = true
 node {
     def cred = credentials("server-docker")
 
-    echo "$cred" 
+    echo "$cred.userName" 
 }
