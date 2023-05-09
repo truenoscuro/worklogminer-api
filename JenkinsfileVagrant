@@ -13,6 +13,7 @@ node {
         usernameVariable: 'userName')]) {
 
         remote.user =  userName
+        sh "chmod 700 ${identity}"
         remote.identityFile = identity
 
         sshCommand remote: remote , command: 'echo "hello world"'
