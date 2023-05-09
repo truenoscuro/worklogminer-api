@@ -21,6 +21,7 @@ node {
         remote.identityFile = keyFile 
         
         sh "touch prova-1"
+        sh "touch prova-2"
         sh "find . -regex  *-1"
         //putSsh("prova-1",'.')
 
