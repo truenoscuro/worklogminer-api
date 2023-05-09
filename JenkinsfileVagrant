@@ -13,8 +13,9 @@ node {
         usernameVariable: 'userName')]) {
 
         remote.user =  userName
-        remote.identityFile = keyFile    
+        remote.identityFile = keyFile 
+        sshCommand remote: remote , command: 'ls',sudo: true
     }
-    sshCommand remote: remote , command: 'ls',sudo: true
+    
 
 }
