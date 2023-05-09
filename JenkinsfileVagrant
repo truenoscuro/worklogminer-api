@@ -1,8 +1,16 @@
 @Library("custom-library") _
-node{
-    td.init this, env  // stage init program le puedes pasar el nombre del sonar
-    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
-    
+def remote = [:]
+remote.name = "server"
+remote.host = "172.17.177.22"
+remote.allowAnyHosts = true
 
+node {
+    withCredentials([sshUserPrivateKey(credentialsId: 'server-docker', keyFileVariable: 'privateKey',passphraseVariable: '', usernameVariable: 'userName')]) {
+        remote.user = userName
+        remote.identityFile = privateKey
+        stage("SSH Steps !") {
 
+           
+        }
+    }
 }
