@@ -9,9 +9,12 @@ node {
         keyFileVariable: 'identity',
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
-            
-            sh "chmod 700 $identity"
-            sh "ssh -i $identity $userName@$host ls"
+            sh """
+            touch key
+            cat $identity > key
+            chmod 700 key
+            ssh -i key $userName@$host ls
+            """
     
     }
 }
