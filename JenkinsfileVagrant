@@ -18,6 +18,7 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
         remote.user =  userName
+        
         remote.identityFile = keyFile 
         
         sh "touch prova-1"
