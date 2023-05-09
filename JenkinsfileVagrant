@@ -6,13 +6,16 @@ remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 
 node {
+    withCredentials([sshUserPrivateKey(
+        credentialsId: 'server-docker', 
+        keyFileVariable: 'keyFile',
+        passphraseVariable: '', 
+        usernameVariable: 'userName')]) {
+
+        remote.user =  userName
+        remote.identityFile = keyFile 
+        sshCommand([remote: remote , command: 'ls',sudo: false])
+    }
     
-    td.init this, env  // stage init program le puedes pasar el nombre del sonar
-    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
-    
-
-    td.sshComand([host:"172.17.177.22",credentialsId:"server-docker"],"ls") // de tota la vida pots pasar un nom d'un script tambe o fa
-
-
 
 }
