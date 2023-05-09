@@ -1,7 +1,7 @@
 @Library("custom-library") _
 
 def remote = [:]
-remote.name = "server"
+remote.name = "vagrant"
 remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 
