@@ -10,7 +10,7 @@ def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${
 def remove = { String p ->  sshRemove([remote: remote , path: "${p}"])}
 node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
-    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    //td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
     withCredentials([sshUserPrivateKey(
         credentialsId: 'server-docker', 
@@ -20,8 +20,8 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
-        sh "ls ./src/"
-
+        sh "touch prova-1"
+        sh "find . -name  1 | echo"
         //putSsh("prova-1",'.')
 
         //com("ls")
