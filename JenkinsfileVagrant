@@ -12,7 +12,7 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
 
-            echo "${identity}"
+            echo "${userName}"
     
     }
 }
