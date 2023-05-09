@@ -14,7 +14,7 @@ node {
 
 
         remote.user =  userName
-        remote.identityFile = "$keyFile"
+        remote.identityFile = $keyFile
 
         sshCommand remote: remote , command: 'echo "hello world"'
     
