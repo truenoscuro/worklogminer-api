@@ -5,7 +5,7 @@ remote.name = "server"
 remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 def com = { String c ->  sshCommand([remote: remote , command: "${c}",sudo: false])}
-def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}",sudo: false])}
+def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}",filterBy: "prova"])}
 def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}",sudo: false, override: true])}
 def remove = { String p ->  sshRemove([remote: remote , path: "${p}",sudo: false])}
 node {
@@ -21,10 +21,8 @@ node {
         remote.identityFile = keyFile 
         
         sh "touch prova-1"
-        def nom = sh "ls prova-*"
-        echo "$nom"
 
-        //putSsh("prova-*",'.')
+        putSsh("prova-*",'.')
 
         //com("ls")
 
