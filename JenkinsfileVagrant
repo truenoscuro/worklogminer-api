@@ -22,7 +22,7 @@ node {
         
 
 
-        put("Dockefile,'.'")
+        put("Dockefile",'.')
         com("ls")
         remove("Dockerfile")
     }
