@@ -12,8 +12,8 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
 
-        remote.user =  'userName'
-        remote.identityFile = 'identity'
+        remote.user =  userName
+        remote.identityFile = identity
 
         sshCommand remote: remote , command: 'echo "hello world"'
     
