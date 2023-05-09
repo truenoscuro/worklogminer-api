@@ -13,7 +13,7 @@ node {
         usernameVariable: 'userName')]) {
 
         remote.user =  userName
-        remote.identityFile = identity
+        remote.identity = identity
 
         sshCommand remote: remote , command: 'echo "hello world"'
     
