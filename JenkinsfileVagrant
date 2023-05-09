@@ -10,5 +10,5 @@ node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
     
-    td.sshComand([host:"172.17.177.22",credentialsId:],"ls")
+    td.sshComand([host:"172.17.177.22",credentialsId:"server-docker"],"ls")
 }
