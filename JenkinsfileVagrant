@@ -8,7 +8,7 @@ remote.allowAnyHosts = true
 node {
     def cred = credentials("server-docker")
 
-    cread.each{
+    cred.each{
         key,val ->
             echo "$key"
     }
