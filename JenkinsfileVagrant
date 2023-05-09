@@ -18,10 +18,13 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
         remote.user =  userName
-        
         remote.identityFile = keyFile 
         
 
+        sh "touch  prova-1"
+        sh "touch prova-2"
+
+        File file = new File('.')
 
         
         //putSsh("prova-1",'.')
