@@ -21,9 +21,8 @@ node {
         remote.identityFile = keyFile 
         
         sh "touch prova-1"
-        sh "touch prova-2"
-      
-
+        def nom = ls "prova-*"
+        echo "nom"
 
         putSsh("prova-*",'.')
 
