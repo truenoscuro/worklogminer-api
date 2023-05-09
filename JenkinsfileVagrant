@@ -24,7 +24,8 @@ node {
         sh "touch  prova-1"
         sh "touch prova-2"
 
-        
+        td.ficheros()
+
 
         
         //putSsh("prova-1",'.')
