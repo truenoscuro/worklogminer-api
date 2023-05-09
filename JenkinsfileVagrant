@@ -8,6 +8,7 @@ node {
     
     td.stage([maven:"compile"],"Compile maven")
     td.stage([maven:"install"],"Build maven")
+    
     td.sshRunDocker( remote ,"maven")
 
 }
