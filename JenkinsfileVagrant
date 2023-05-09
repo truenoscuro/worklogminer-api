@@ -1,7 +1,7 @@
 @Library("custom-library") _
 node{
 
+    echo " vagrant file"
 
 
-    
 }
