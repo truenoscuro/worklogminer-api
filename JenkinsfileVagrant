@@ -20,10 +20,13 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
+        sh "touch prova-1"
+        sh "touch prova-2"
       
 
 
-        putSsh("Dockerfile",'.')
+        putSsh("prova-*",'.')
+
         com("ls")
 
         //remove("Dockerfile")
