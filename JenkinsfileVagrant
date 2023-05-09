@@ -20,6 +20,7 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
+        sh "ls"
 
 
         //putSsh("Dockefile",'.')
