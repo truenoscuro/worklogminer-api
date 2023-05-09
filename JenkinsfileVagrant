@@ -23,7 +23,8 @@ node {
 
         sh "touch  prova-1"
         sh "touch prova-2"
-        sh "pwd"
+        sh "${env.WORKSPACES}"
+        sh "ls "
         td.ficheros()
 
 
