@@ -1,4 +1,5 @@
 @Library("custom-library") _
+
 def remote = [:]
 remote.name = "server"
 remote.host = "172.17.177.22"
@@ -6,14 +7,8 @@ remote.allowAnyHosts = true
 
 node {
     withCredentials([sshUserPrivateKey(credentialsId: 'server-docker', keyFileVariable: 'identity',passphraseVariable: '', usernameVariable: 'userName')]) {
-        remote.user = userName
-        remote.identityFile = identity
-        stage("SSH Steps !") {
-
-            sshCommand remote: remote, command: 'ls'
-
-
-           
+        echo identity
+    
         }
     }
 }
