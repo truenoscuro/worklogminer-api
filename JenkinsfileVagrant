@@ -7,7 +7,7 @@ remote.allowAnyHosts = true
 
 node {
     withCredentials([sshUserPrivateKey(credentialsId: 'server-docker', keyFileVariable: 'identity',passphraseVariable: '', usernameVariable: 'userName')]) {
-        echo identity
+        echo "${identity}"
     
         }
     }
