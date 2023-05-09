@@ -15,6 +15,6 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile    
     }
-    shCommand remote: remote , command: 'touch prova1',sudo: true
+    sshCommand remote: remote , command: 'touch prova1',sudo: true
 
 }
