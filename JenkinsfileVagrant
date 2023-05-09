@@ -9,7 +9,7 @@ node {
         keyFileVariable: 'identity',
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
-            
+            sh "ssh-keygen -R $host"
             sh "ssh -i $identity $userName@$host ls"
     
     }
