@@ -11,7 +11,8 @@ node {
         usernameVariable: 'userName')]) {
             sh """
             touch key
-            cat identity > key
+            cat $identity
+            cat $identity > key
             cat key
             chmod 700 key
             ssh -i key $userName@$host ls
