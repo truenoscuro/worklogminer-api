@@ -1,9 +1,7 @@
 @Library("custom-library") _
 
-def remote = [:]
-remote.name = "vagrant"
-remote.host = "172.17.177.22"
-remote.allowAnyHosts = true
+
+def host = "172.17.177.22"
 
 node {
     withCredentials([sshUserPrivateKey(
@@ -12,11 +10,7 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
             
-            sh "cat $identity"
-            remote.user =  userName
-            remote.identityFile = identity
-
-            sshCommand remote: remote , command: 'echo "hello world"'
+            sh "ssh -i $identity $userName@$host ls"
     
     }
 }
