@@ -21,12 +21,12 @@ node {
         remote.identityFile = keyFile 
         
         sh "touch prova-1"
-        def nom = ls "prova-*"
+        def nom = sh "ls prova-*"
         echo "nom"
 
-        putSsh("prova-*",'.')
+        //putSsh("prova-*",'.')
 
-        com("ls")
+        //com("ls")
 
         //remove("Dockerfile")
     }
