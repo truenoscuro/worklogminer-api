@@ -4,7 +4,7 @@ def remote = [:]
 remote.name = "server"
 remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
-def funct = { c ->  sshCommand([remote: remote , command: '${c}',sudo: false])}
+def funct = { c ->  sshCommand([remote: remote , command: "${c}",sudo: false])}
 node {
     withCredentials([sshUserPrivateKey(
         credentialsId: 'server-docker', 
