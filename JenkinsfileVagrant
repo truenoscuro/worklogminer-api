@@ -22,9 +22,9 @@ node {
         
 
 
-        putSsh("Dockefile",'.')
+        //putSsh("Dockefile",'.')
         com("ls")
-        remove("Dockerfile")
+        //remove("Dockerfile")
     }
     
 
