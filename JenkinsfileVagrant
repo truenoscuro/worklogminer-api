@@ -22,7 +22,7 @@ node {
         
         sh "touch prova-1"
         def nom = sh "ls prova-*"
-        echo "nom"
+        echo "$nom"
 
         //putSsh("prova-*",'.')
 
