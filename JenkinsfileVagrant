@@ -6,7 +6,7 @@ remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 def com = { String c ->  sshCommand([remote: remote , command: "${c}",sudo: false])}
 def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}"])}
-def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}" override: true])}
+def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}", override: true])}
 def remove = { String p ->  sshRemove([remote: remote , path: "${p}"])}
 node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
