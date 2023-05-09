@@ -5,9 +5,9 @@ remote.name = "server"
 remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 def com = { String c ->  sshCommand([remote: remote , command: "${c}",sudo: false])}
-def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}",filterBy: "prova"])}
-def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}",sudo: false, override: true])}
-def remove = { String p ->  sshRemove([remote: remote , path: "${p}",sudo: false])}
+def putSsh = { String f,String i ->  sshPut([remote: remote , from: "${f}",into:"${i}"])}
+def get = { String f,String i ->  sshGet([remote: remote , from: "${f}",into:"${i}" override: true])}
+def remove = { String p ->  sshRemove([remote: remote , path: "${p}"])}
 node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
     td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
@@ -20,9 +20,9 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
-        sh "touch prova-1"
+        ls "./target/"
 
-        putSsh("prova-*",'.')
+        //putSsh("prova-1",'.')
 
         //com("ls")
 
