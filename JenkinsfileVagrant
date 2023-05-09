@@ -12,7 +12,7 @@ node {
     //td.stage([maven:"install"],"Build maven")
     td.stage([angular:"install"],"install package.json")
     td.stage([angular:"build"],"install package.json")
-    sh "los ./dist"
+    sh "ls ./dist"
     //td.sshRunDocker( ssh ,"angular",true)
 
 }
