@@ -6,11 +6,15 @@ remote.host = "172.17.177.22"
 remote.allowAnyHosts = true
 
 node {
-    def cred = withCredentials([sshUserPrivateKey(
+    def userName;
+    withCredentials([sshUserPrivateKey(
         credentialsId: 'server-docker', 
         keyFileVariable: 'keyFile',
         passphraseVariable: '', 
-        usernameVariable: 'user')])
+        usernameVariable: 'user')]){
+            userName = user
 
-    echo "$cred.user" 
+        }
+
+    echo "$userName" 
 }
