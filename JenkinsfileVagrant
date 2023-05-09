@@ -10,8 +10,8 @@ node {
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
             
-            sh "chmod 700 %identity%"
-            sh "ssh -i %identity% $userName@$host ls"
+            sh "chmod 700 $identity"
+            sh "ssh -i $identity $userName@$host ls"
     
     }
 }
