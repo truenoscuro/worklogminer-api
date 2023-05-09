@@ -20,10 +20,11 @@ node {
         remote.user =  userName
         remote.identityFile = keyFile 
         
+      
+
+
+        putSsh("Dockerfile",'.')
         sh "ls"
-
-
-        //putSsh("Dockefile",'.')
         com("ls")
         //remove("Dockerfile")
     }
