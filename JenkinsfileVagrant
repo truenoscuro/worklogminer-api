@@ -1,16 +1,21 @@
 @Library("custom-library") _
 
-
-def host = "172.17.177.22"
+def remote = [:]
+remote.name = "server"
+remote.host = "172.17.177.22"
+remote.allowAnyHosts = true
 
 node {
     withCredentials([sshUserPrivateKey(
         credentialsId: 'server-docker', 
-        keyFileVariable: 'identity',
+        keyFileVariable: 'keyFile',
         passphraseVariable: '', 
         usernameVariable: 'userName')]) {
-            sh "ssh-keygen -R $host"
-            sh "ssh -i $identity $userName@$host ls"
+
+        remote.user =  userName
+        remote.identityFile = keyFile
+
+        sshCommand remote: remote , command: 'echo "hello world"'
     
     }
 }
