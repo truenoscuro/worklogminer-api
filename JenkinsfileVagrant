@@ -1,7 +1,8 @@
 @Library("custom-library") _
 node{
-
-    echo " vagrant file"
+    td.init this, env  // stage init program le puedes pasar el nombre del sonar
+    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    
 
 
 }
