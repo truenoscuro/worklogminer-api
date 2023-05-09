@@ -1,16 +1,18 @@
 @Library("custom-library") _
-
-def remote = [:]
-remote.host = "172.17.177.22"
-remote.credentialsId ="server-docker"
+def ssh = [:]
+ssh.host = "172.17.177.22"
+ssh.credentialsId ="server-docker"
 
 node {
     td.init this, env  // stage init program le puedes pasar el nombre del sonar
-    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    //td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    td.git "https://github.com/truenoscuro/test-github.git"
     
-    td.stage([maven:"compile"],"Compile maven")
-    td.stage([maven:"install"],"Build maven")
-
-    td.sshRunDocker( remote ,"maven",true)
+    //td.stage([maven:"compile"],"Compile maven")
+    //td.stage([maven:"install"],"Build maven")
+    td.stage([angular:"install"],"install package.json")
+    td.stage([angular:"build"],"install package.json")
+    sh "los ./dist"
+    //td.sshRunDocker( ssh ,"angular",true)
 
 }
