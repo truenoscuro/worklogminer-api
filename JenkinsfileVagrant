@@ -21,12 +21,7 @@ node {
         
         remote.identityFile = keyFile 
         
-        sh "touch prova-1"
-        sh "touch prova-2"
 
-        def directorio = "."
-
-        new File( directorio ).eachFile echo "${it}"
 
         
         //putSsh("prova-1",'.')
