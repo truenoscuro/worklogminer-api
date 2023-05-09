@@ -3,6 +3,7 @@
 def remote = [:]
 remote.name = "server"
 remote.host = "172.17.177.22"
+remote.allowAnyHosts = true
 
 node {
     withCredentials([sshUserPrivateKey(
