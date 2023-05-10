@@ -19,7 +19,7 @@ node{
     // functions 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
-    //sh "mvn -v"
+    cmd "mvn -v"
     //td.stage([maven:"mvnV"])
     //git()
     //parallel([personal:{ cmd "ls"}])
