@@ -3,7 +3,7 @@
 // quitarlo deja en default false = linux
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
-cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
+cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
 cfg.sonar = [name:"test-scanner",tool:"scanner-jenkins"]
@@ -18,8 +18,11 @@ node{
     td.init(this , env,cfg.globalConfig,cfg.systemConfig) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
-    
-    
+    td.git()
+    def scannerHome = tool 'sonar';
+    withSonarQubeEnv('prueba') { // If you have configured more than one global server connection, you can specify its name
+      sh "${scannerHome}/bin/sonar-scanner"
+    }
     
     
     //cmd "mvn -v"
