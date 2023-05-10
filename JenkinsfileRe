@@ -1,13 +1,17 @@
 @Library("re-library") _
 // Config isWindows = false
-// quitarlo deja en default false = linux
+isWindos = false
+
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
 cfg.sonar = [name:"prueba",tool:"sonar"]
-//cfg.maven=[toolJDK:"",toolMaven:""]
+
+//cfg.ssh
+
+
 
 //init global config
 cfg.init()
@@ -20,7 +24,7 @@ node{
      //-------------------
     td.git()
     //td.stage([sonar:"scanner"])
-    td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
+    //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
     
     //cmd "mvn -v"
     //td.stage([maven:"mvnV" ,name:"test"])
