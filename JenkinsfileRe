@@ -7,6 +7,8 @@ cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
 cfg.sonar = [name:"test-scanner",tool:"scanner-jenkins"]
+//cfg.maven=[toolJDK:"",toolMaven:""]
+
 
 
 //init global config
@@ -15,7 +17,7 @@ node{
     echo "es re-estrucutracio"
     //-------------------
     //Obligatorio no se puege quitar
-    //td.init this , env,cfg.globalConfig
+    td.init this , env,cfg.globalConfig
     // functions 
     //def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
