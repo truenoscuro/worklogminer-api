@@ -15,7 +15,7 @@ cfg.sonar = [name:"test-scanner",tool:"scanner-jenkins"]
 cfg.init()
 node{
     echo "es re-estrucutracio"
-    echo "${globalConfig.systemConfig.isWindows}"
+    echo "${cfg.globalConfig.systemConfig.isWindows}"
     //-------------------
     //Obligatorio no se puege quitar
     //td.init this , env,cfg.globalConfig
