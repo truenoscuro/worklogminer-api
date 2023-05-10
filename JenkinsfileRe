@@ -2,12 +2,13 @@
 // posar se config 
 
 
-// extrac de functions    
-def cmd = td.utils.cmd
+
 node{
     echo "es re-estrucutracio"
     td.init this , env
+    
+    // extrac de functios util    
+    def cmd = td.utils.cmd
 
-    cmd "ls"
     
 }
