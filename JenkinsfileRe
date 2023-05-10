@@ -1,4 +1,4 @@
 @Library("custom-library") _
 node{
-    
+    echo "es re-estrucutracio"
 }
