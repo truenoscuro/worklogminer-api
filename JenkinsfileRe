@@ -20,7 +20,7 @@ node{
      //-------------------
     td.git()
     //td.stage([sonar:"scanner"])
-    td.docker([tag:"node",com:[angular:"npmV"],arg:"-u root"])
+    td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
     
     //cmd "mvn -v"
     //td.stage([maven:"mvnV" ,name:"test"])
