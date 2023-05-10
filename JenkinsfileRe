@@ -15,12 +15,15 @@ node{
     echo "es re-estrucutracio"
     //-------------------
     //Obligatorio no se puege quitar
-    td.init(this , env,cfg.globalConfig,cfg.systemConfig)
-    // functions 
+    td.init(this , env,cfg.globalConfig,cfg.systemConfig) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
+    
+    
+    
+    
     //cmd "mvn -v"
-    td.stage([maven:"mvnV" ,name:"test"])
+    //td.stage([maven:"mvnV" ,name:"test"])
     //git()
     //parallel([personal:{ cmd "ls"}])
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
