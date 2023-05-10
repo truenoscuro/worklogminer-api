@@ -2,7 +2,7 @@
 // posar se config 
 
 cfg.isWindows = true
-
+cfg.init()
 node{
     echo "es re-estrucutracio"
     td.init this , env
