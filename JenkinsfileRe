@@ -14,7 +14,7 @@ node{
     td.init this , env,cfg.globalConfig
     // functions 
     def cmd = td.utils.cmd
-    def git = td.utils.git
+    def git = td.git
     def stage = td.stage
      //-------------------
     git 
