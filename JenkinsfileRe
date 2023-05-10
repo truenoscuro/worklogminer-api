@@ -1,6 +1,6 @@
 @Library("re-library") _
 // Config 
-cfg.isWindows = false // quitarlo deja en default false
+cfg.isWindows = false // quitarlo deja en default false = linux
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git",branch:"vamos"]
@@ -14,5 +14,6 @@ node{
 
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     def cmd = td.utils.cmd
-
+    
+    cmd "echo prueba"
 }
