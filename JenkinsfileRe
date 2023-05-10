@@ -2,8 +2,8 @@
 // Config 
 cfg.isWindows = false // quitarlo deja en default false
 
-//cfg.git = url:"",credentialsId:"credentialsId", branch:"default master"
-cfg.git = url:"https://github.com/truenoscuro/jenkinsBrut.git",branch: 'patata'
+//cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
+cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git",branch:"vamos"]
 
 //init global config
 cfg.init()
