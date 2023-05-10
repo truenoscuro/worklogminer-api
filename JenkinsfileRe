@@ -16,10 +16,10 @@ node{
     def cmd = td.utils.cmd
     
     def stage = td.stage
-    def git = td.git
+    def git = td.gitF
 
      //-------------------
-    git
+    gitF
     //stage personal:{ cmd "ls"}, name:"ls tests"
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
