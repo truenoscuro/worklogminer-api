@@ -19,8 +19,8 @@ node{
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
     td.git()
-    td.stage([sonar:"scanner"])
-    
+    //td.stage([sonar:"scanner"])
+    td.docker([tag:"node" com:[angular:"npmV"]])
     
     //cmd "mvn -v"
     //td.stage([maven:"mvnV" ,name:"test"])
