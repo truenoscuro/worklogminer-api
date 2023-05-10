@@ -9,7 +9,7 @@ cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git",branch:"vamos"]
 cfg.init()
 node{
     echo "es re-estrucutracio"
-    td.init this , env,cfg.config
+    td.init this , env,cfg.globalConfig
     
 
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
