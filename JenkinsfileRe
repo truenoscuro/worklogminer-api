@@ -20,7 +20,7 @@ node{
 
      //-------------------
 
-    stage angular:"version",custom:{echo "som custom"}
+    stage angular:"version",custom:{ echo "som custom"}
     //git()
     //parallel personal:{ cmd "ls"}
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
