@@ -5,6 +5,10 @@ cfg.isWindows = false // quitarlo deja en default false = linux
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
 
+//cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries=true,properties="sonar-project.properties",binaries="."] 
+cfg.sonar = [name:"test-scanner",tool:"scanner-jenkins"]
+
+
 //init global config
 cfg.init()
 node{
@@ -16,9 +20,9 @@ node{
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
 
-    td.stage([angular:["nodeV","npmV"]])
+    //td.stage([angular:["nodeV","npmV"]])
     //git()
-    //parallel personal:{ cmd "ls"}
+    //parallel([personal:{ cmd "ls"}])
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
 }
