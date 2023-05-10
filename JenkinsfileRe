@@ -13,8 +13,9 @@ node{
     //Obligatorio no se puege quitar
     td.init this , env,cfg.globalConfig
     def cmd = td.utils.cmd
+    def git = td.utils.git
      //-------------------
-    td.git()
+    git 
     
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
