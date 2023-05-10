@@ -18,7 +18,7 @@ node{
     echo "${cfg.globalConfig.systemConfig.isWindows}"
     //-------------------
     //Obligatorio no se puege quitar
-    //td.init this , env,cfg.globalConfig
+    td.init this , env,cfg.globalConfig,cfg.systemConfig
     // functions 
     //def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
