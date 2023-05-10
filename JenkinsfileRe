@@ -5,7 +5,7 @@ cfg.isWindows = false // quitarlo deja en default false = linux
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
 
-//cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries=true,properties="sonar-project.properties",binaries="."] 
+//cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
 cfg.sonar = [name:"test-scanner",tool:"scanner-jenkins"]
 
 
