@@ -3,7 +3,7 @@
 cfg.isWindows = false // quitarlo deja en default false = linux
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
-cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git",branch:"vamos"]
+cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
 
 //init global config
 cfg.init()
@@ -16,7 +16,5 @@ node{
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     def cmd = td.utils.cmd
     
-
-
-    //cmd "ls"
+    cmd "ls"
 }
