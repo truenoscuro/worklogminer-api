@@ -19,8 +19,8 @@ node{
     def stage = td.stage
     def parallel = td.parallel
      //-------------------
-    git
-    parallel personal:{ cmd "ls"}
+    git()
+    //parallel personal:{ cmd "ls"}
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
 }
