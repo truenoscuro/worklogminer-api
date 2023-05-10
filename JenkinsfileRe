@@ -16,7 +16,7 @@ node{
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
 
-    td.stage [angular:"version", angular:"version"]
+    td.stage([angular:"version", angular:"version"])
     //git()
     //parallel personal:{ cmd "ls"}
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
