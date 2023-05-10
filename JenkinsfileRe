@@ -9,12 +9,15 @@ cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
 cfg.init()
 node{
     echo "es re-estrucutracio"
-
+    //-------------------
+    //Obligatorio no se puege quitar
     td.init this , env,cfg.globalConfig
-    td.git()
+    def cmd = td.utils.cmd
+     //-------------------
+    td.git
     
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
-    def cmd = td.utils.cmd
+    
     
     cmd "ls"
 }
