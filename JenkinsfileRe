@@ -14,7 +14,7 @@ node{
     td.init this , env,cfg.globalConfig
     def cmd = td.utils.cmd
      //-------------------
-    td.git
+    td.git()
     
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
