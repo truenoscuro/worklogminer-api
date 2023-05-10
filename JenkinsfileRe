@@ -1,4 +1,13 @@
 @Library("custom-library") _
+// posar se config 
+
+
+
 node{
     echo "es re-estrucutracio"
+    
+    td.init this, env  // stage init program le puedes pasar el nombre del sonar
+    td.git "https://github.com/truenoscuro/worklogminer-api.git"  // stage git aques
+    
+    
 }
