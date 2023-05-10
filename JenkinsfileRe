@@ -14,10 +14,12 @@ node{
     td.init this , env,cfg.globalConfig
     // functions 
     def cmd = td.utils.cmd
+    
     def stage = td.stage
+    def git = td.git
 
      //-------------------
-    td.git()
+    git
     //stage personal:{ cmd "ls"}, name:"ls tests"
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
