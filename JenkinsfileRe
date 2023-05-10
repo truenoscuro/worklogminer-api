@@ -1,15 +1,18 @@
 @Library("re-library") _
-// posar se config 
+// Config 
+cfg.isWindows = false // quitarlo deja en default false
 
-cfg.isWindows = true
+//cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
+cfg.git = url:"https://github.com/truenoscuro/jenkinsBrut.git",branch: 'patata'
+
+//init global config
 cfg.init()
 node{
     echo "es re-estrucutracio"
-    td.init this , env
+    td.init this , env,cfg.config
     
 
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     def cmd = td.utils.cmd
-    echo "${cfg.isWindows}"
-    echo "${cfg.globalConfig.isWindows}"
+
 }
