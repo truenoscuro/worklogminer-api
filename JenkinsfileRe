@@ -19,10 +19,10 @@ node{
     //Obligatorio no se puege quitar
     td.init(this , env,cfg.globalConfig,cfg.systemConfig)
     // functions 
-    //def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
+    def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
      //-------------------
 
-    //td.stage([angular:["nodeV","npmV"]])
+    td.stage([maven:"mvnV"])
     //git()
     //parallel([personal:{ cmd "ls"}])
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
