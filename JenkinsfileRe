@@ -1,7 +1,7 @@
 @Library("re-library") _
 // posar se config 
 
-cfg.isWindows()
+cfg.isWindows = true
 
 node{
     echo "es re-estrucutracio"
