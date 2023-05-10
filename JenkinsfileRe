@@ -1,5 +1,5 @@
 @Library("re-library") _
-// Config 
+// Config isWindows = false
 // quitarlo deja en default false = linux
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
