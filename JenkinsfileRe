@@ -1,6 +1,6 @@
 @Library("re-library") _
 // Config 
-cfg.isWindows = false // quitarlo deja en default false = linux
+// quitarlo deja en default false = linux
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/jenkinsBrut.git"]
