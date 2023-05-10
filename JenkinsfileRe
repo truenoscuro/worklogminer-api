@@ -14,11 +14,10 @@ node{
     td.init this , env,cfg.globalConfig
     def cmd = td.utils.cmd
     def git = td.utils.git
+    def stage = td.stage
      //-------------------
     git 
-    
+    stage personal:{ cmd "ls"}, name:"ls tests"
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     
-    
-    cmd "ls"
 }
