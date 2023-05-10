@@ -10,6 +10,6 @@ node{
 
     // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
     def cmd = td.utils.cmd
-
+    echo "${cfg.isWindows}"
     echo "${cfg.globalConfig.isWindows}"
 }
