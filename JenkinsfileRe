@@ -22,7 +22,7 @@ node{
     //td.git()
     //cmd "ls"
     //td.stage([angular:["install","build"]])
-    td.sshDocker([language:"angular", isSudo:true])
+    //td.sshDocker([language:"angular", isSudo:true])
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
     
