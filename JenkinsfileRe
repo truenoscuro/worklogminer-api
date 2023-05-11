@@ -7,7 +7,7 @@
 cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
-cfg.sonar=[name:"prueba",tool:"s"]
+cfg.sonar=[name:"prueba",tool:"scanner"]
 //cfg.ssh
 //cfg.ssh = [host:"172.17.177.22",credentialsId:"server-docker"]
 
