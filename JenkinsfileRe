@@ -1,7 +1,6 @@
 @Library("re-library") _
 // Config isWindows = false
-isWindos = false
-
+//isWindos = false
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/test-github.git"]
