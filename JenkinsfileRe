@@ -21,7 +21,7 @@ node{
     td.init( this , env,cfg.globalConfig ) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
     //-------------------
-    td.maven()
+    td.stage([m:"i"])
     //td.parallel([mvn:"comp",s:"scan"])
     //td.stage([m:"pack", name:"package maven"])
 
