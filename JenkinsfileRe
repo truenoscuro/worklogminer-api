@@ -22,7 +22,7 @@ node{
     //-------------------
     td.git()
     //cmd "ls"
-    td.stage([m:["c","p"],name:"compilar i instalar maven"])
+   // td.stage([m:["c","p"],name:"compilar i instalar maven"])
     td.sshDocker([language:"maven", isSudo:true])
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
