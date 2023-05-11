@@ -36,7 +36,8 @@ node{
         echo "ya me despertat del 5 segons"
         sleep(3)
         echo "sleep de 3 fet"
-    }])
+    },
+    m:"i"])
     //td.parallel([mvn:"comp",s:"scan"])
     //td.stage([m:"pack", name:"package maven"])
 
