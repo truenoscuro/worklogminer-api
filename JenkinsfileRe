@@ -22,6 +22,7 @@ node{
     //-------------------
     td.git()
     td.parallel([s:"scan"])
+    td.stage([s:"scan"])
     //td.stage([m:"pack", name:"package maven"])
 
     //td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
