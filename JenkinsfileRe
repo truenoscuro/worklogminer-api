@@ -7,9 +7,9 @@
 cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
-//cfg.sonar=[name:"prueba",tool:"scanner"]
+cfg.sonar=[name:"prueba",tool:"scanner"]
 //cfg.ssh
-cfg.ssh = [host:"172.17.177.22",credentialsId:"server-docker"]
+//cfg.ssh = [host:"172.17.177.22",credentialsId:"server-docker"]
 
 //init global config
 cfg.init()
@@ -21,9 +21,13 @@ node{
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
     //-------------------
     td.git()
+    td.parallel([mvn:"comp",s:"scan"])
+    td.stage([m:"pack", name:"package maven"])
+
+    td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
     //cmd "ls"
    // td.stage([m:["c","p"],name:"compilar i instalar maven"])
-    td.sshDocker([language:"maven", isSudo:true])
+    //td.sshDocker([language:"maven", isSudo:true])
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
     
