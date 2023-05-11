@@ -22,7 +22,8 @@ node{
     //-------------------
     td.git()
     td.parallel([mvn:"comp",custom:{
-        sleep(1)
+        sleep(10)
+        echo "stop sleep"
     }])
     //td.stage([m:"pack", name:"package maven"])
 
