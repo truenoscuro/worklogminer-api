@@ -19,9 +19,9 @@ node{
     td.init( this , env,cfg.globalConfig) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
     //-------------------
-    td.git()
-    cmd "ls"
-    td.stage([angular:["install","build"]])
+    //td.git()
+    //cmd "ls"
+    //td.stage([angular:["install","build"]])
     td.sshDocker([language:"angular", isSudo:true])
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
