@@ -27,7 +27,7 @@ node{
     }])
     //td.stage([m:"pack", name:"package maven"])
 
-    td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
+    //td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
     //cmd "ls"
    // td.stage([m:["c","p"],name:"compilar i instalar maven"])
     //td.sshDocker([language:"maven", isSudo:true])
