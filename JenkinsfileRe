@@ -4,14 +4,11 @@ isWindos = false
 
 
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
-cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
+cfg.git = [url:"https://github.com/truenoscuro/test-github.git"]
 
 //cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
-cfg.sonar = [name:"prueba",tool:"sonar"]
-
 //cfg.ssh
-
-
+cfg.ssh = [host:"172.17.177.22",credentialsId:"server-docker"]
 
 //init global config
 cfg.init()
@@ -19,10 +16,11 @@ node{
     echo "es re-estrucutracio"
     //-------------------
     //Obligatorio no se puege quitar
-    td.init(this , env,cfg.globalConfig,cfg.systemConfig) 
+    td.init( this , env,cfg.globalConfig) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
-     //-------------------
+    //-------------------
     td.git()
+    cmd "ls"
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
     
