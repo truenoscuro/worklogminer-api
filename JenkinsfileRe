@@ -2,20 +2,20 @@
 // Config isWindows = false
 //isWindos = false
 
-//cfg.maven =[maven:"",jdk:""]
-//cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
-//cfg.git = [url:"https://github.com/truenoscuro/test-github.git"]
+// Parametros cfg.maven = [maven:"",jdk:""]
+//cfg.maven = [maven:"",jdk:""]
+//Parametros cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
 
-//cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
+//Parametros cfg.sonar=[name:"",tool:"",pathScanner:"",haveBinaries:true,properties:"sonar-project.properties",binaries:"."] 
 cfg.sonar=[name:"prueba",tool:"sonar"]
-//cfg.ssh
+//Parametros cfg.ssh = [name:"server",host:"localhost",allowAnyHosts:true,credentialsId:"",user:"root",password:"admin"]
 //cfg.ssh = [host:"172.17.177.22",credentialsId:"server-docker"]
 
-//init global config
+//-----------------------
+//init global config NO QUITAR
 cfg.init()
 node{
-    //echo "es re-estrucutracio"
     //-------------------
     //Obligatorio no se puege quitar + git
     td.init( this , env,cfg.globalConfig ) 
@@ -26,15 +26,10 @@ node{
     td.stage([m:"pack", name:"package maven"])
 
     td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
-    cmd "ls"
-   // td.stage([m:["c","p"],name:"compilar i instalar maven"])
+    
+    //EJEMPLOS DE sshDOcker docker para test i cmd
+    //cmd "ls"
     //td.sshDocker([language:"maven", isSudo:true])
-    //td.stage([sonar:"scanner"])
-    //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
-    
-    //cmd "mvn -v"
-    //git()
-    //parallel([personal:{ cmd "ls"}])
-    // extrac de functio cmd escriu en bat si es windows o en sh si es linux    
-    
+    //td.docker([tag:"node",com:[angular:["i","b"]],arg:"-u root"])
+
 }
