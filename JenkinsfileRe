@@ -16,17 +16,29 @@ cfg.init()
 node{
     //echo "es re-estrucutracio"
     //-------------------
-    //Obligatorio no se puege quitar
-    td.init( this , env,cfg.globalConfig) 
+    //Obligatorio no se puege quitar + git
+    td.init( this , env,cfg.globalConfig ) 
     def cmd = td.utils.cmd // cmd canvia  a sh si es linux bat si es windows
     //-------------------
-    td.git()
-    td.parallel([mvn:"comp",s:"scan"])
+
+    td.parallel([custom:{ echo "som custom"},test-magistral:{
+        sleep(5)
+        echo "ya me despertat del 5 segons"
+        sleep(2)
+        echo "sleep de 2"
+    },
+    sleep-lento:{
+        sleep(1)
+        echo "ya me despertat del 5 segons"
+        sleep(3)
+        echo "sleep de 3 fet"
+    }])
+    //td.parallel([mvn:"comp",s:"scan"])
     //td.stage([m:"pack", name:"package maven"])
 
-    td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
+    //td.stage([name:"reedwook",custom:{echo "npo se puede testear uWu"}])
     //cmd "ls"
-   // td.stage([m:["c","p"],name:"compilar i instalar maven"])
+    // td.stage([m:["c","p"],name:"compilar i instalar maven"])
     //td.sshDocker([language:"maven", isSudo:true])
     //td.stage([sonar:"scanner"])
     //td.docker([tag:"node",com:[angular:["npmV","nodeV"]],arg:"-u root"])
