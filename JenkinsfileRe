@@ -2,6 +2,7 @@
 // Config isWindows = false
 //isWindos = false
 
+//cfg.maven =[maven:"",jdk:""]
 //cfg.git = [url:"",credentialsId:"credentialsId", branch:"default master"]
 //cfg.git = [url:"https://github.com/truenoscuro/test-github.git"]
 cfg.git = [url:"https://github.com/truenoscuro/worklogminer-api.git"]
